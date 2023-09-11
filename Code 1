@@ -1,0 +1,192 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "5a31f32e-2941-419e-bf87-9138299ccc0d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Population:  1780000\n",
+      "Existing cases:  99\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5.5617977528089886e-05\n"
+     ]
+    }
+   ],
+   "source": [
+    "# prevalence\n",
+    "population = int(input(\"Population: \"))\n",
+    "existingcases = int(input(\"Existing cases: \"))\n",
+    "prevalence = existingcases / population\n",
+    "print(prevalence)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "4f1da45d-8347-4b0f-ad7b-f3498e598662",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5.561797752808989\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(prevalence * 100000)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "f703daf1-d4b7-48d1-9d20-d5876391eb78",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "New cases:  3000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.0016853932584269663\n",
+      "168.53932584269663\n"
+     ]
+    }
+   ],
+   "source": [
+    "# incidence\n",
+    "newcases = int(input(\"New cases: \"))\n",
+    "incidence = newcases / population\n",
+    "print(incidence)\n",
+    "print(incidence * 100000)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "430923f2-b524-403b-8217-57ed730820a7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Number of those who died:  5\n",
+      "Number of those who had the disease:  15000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.0003333333333333333\n",
+      "33.333333333333336\n"
+     ]
+    }
+   ],
+   "source": [
+    "#mortality rate\n",
+    "dead = int(input(\"Number of those who died: \"))\n",
+    "infected = int(input(\"Number of those who had the disease: \"))\n",
+    "mortalityrate = dead / infected\n",
+    "print(mortalityrate)\n",
+    "print(mortalityrate * 100000)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "e73a2d24-cc7f-47ed-b28a-ca1f5e02f03a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "45\n",
+      "32\n",
+      "49\n",
+      "40\n",
+      "25\n"
+     ]
+    }
+   ],
+   "source": [
+    "# years of potential life lost\n",
+    "lifeexpectancy = 77\n",
+    "ages = [32, 45, 28, 37, 52]\n",
+    "print(lifeexpectancy - ages[0])\n",
+    "print(lifeexpectancy - ages[1])\n",
+    "print(lifeexpectancy - ages[2])\n",
+    "print(lifeexpectancy - ages[3])\n",
+    "print(lifeexpectancy - ages[4])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "ecd9d30d-1250-405e-80e6-5d8c48fcf690",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "lifelost = [13, 3]\n",
+    "yppl = sum(lifelost) / sum(lifelost)\n",
+    "print(yppl)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a5aa10bc-02d0-4065-808b-5620489a9460",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
